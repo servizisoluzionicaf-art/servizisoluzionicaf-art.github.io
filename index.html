@@ -233,7 +233,7 @@ padding:14px 18px;border-radius:999px;box-shadow:0 8px 22px #0003}
  const bar=document.createElement('div');
  bar.id='arabicHomeAudioBar';bar.className='arabic-home-audio';
  bar.innerHTML='<button type="button" id="arabicHomeAudioBtn">🇸🇦 🔊 Ascolta la pagina in arabo</button><span id="arabicHomeAudioStatus">Spiegazione vocale dei servizi e di come contattarci</span><audio id="arabicHomeAudio" preload="none" src="https://resource2.heygen.ai/text_to_speech/fa349862987b4b74878279e4faadbf45/1776ddbd05374fa480e92f0297bbc67e/id=e0c55598-17f5-42a3-8921-0acdf98d3f76.wav"></audio>';
- target.parentNode.insertBefore(bar,target);
+ target.insertAdjacentElement('afterend',bar);
  const btn=document.getElementById('arabicHomeAudioBtn');
  const audio=document.getElementById('arabicHomeAudio');
  const status=document.getElementById('arabicHomeAudioStatus');
@@ -431,6 +431,7 @@ padding:14px 18px;border-radius:999px;box-shadow:0 8px 22px #0003}
 .hero-text-block{
   background:#fff;
   padding:28px 5% 34px;
+  min-height:330px;
 }
 .hero-text-inner{
   max-width:1180px;
@@ -480,7 +481,7 @@ padding:14px 18px;border-radius:999px;box-shadow:0 8px 22px #0003}
 }
 .hero-text-block[dir="rtl"] .hero-text-motto{text-align:center}
 @media(max-width:700px){
-  .hero-text-block{padding:20px 16px 26px}
+  .hero-text-block{padding:20px 16px 26px;min-height:430px;contain:layout paint;contain-intrinsic-size:430px}
   .hero-text-brand{font-size:21px}
   .hero-text-kicker{font-size:12px}
   .hero-text-block h1{font-size:29px;margin-top:12px}
